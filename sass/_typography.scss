@@ -5,7 +5,11 @@
 
 .heading-1 {
 	@extend %heading;
+	font-size: 4.5rem;
+	color: $color-grey-light-1;
+	line-height: 1;
 }
+
 .heading-2 {
 	@extend %heading;
 	font-size: 4rem;
@@ -17,6 +21,10 @@
 
 	&--dark {
 		color: $color-grey-dark-1;
+	}
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 3rem;
+		line-height: 1.2;
 	}
 }
 .heading-3 {
@@ -61,6 +69,9 @@
 
 .mb-md {
 	margin-bottom: 3rem;
+	@media only screen and (max-width: $bp-medium) {
+		margin-bottom: 1.5rem;
+	}
 }
 
 .mb-lg {

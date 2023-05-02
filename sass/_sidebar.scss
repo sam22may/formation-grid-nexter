@@ -2,4 +2,159 @@
 	background-color: $color-primary;
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
+
+	&__nav {
+		////////////////
+		/// STYLE ONLY, NO ACTION
+		// display: flex;
+		// justify-content: center;
+		// cursor: pointer;
+		// height: 4.5rem;
+		// margin-top: 2rem;
+	}
+
+	&__content {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 8rem;
+	}
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__checkbox:checked ~ .nav-btn .nav-icon {
+		background-color: transparent;
+	}
+
+	&__checkbox:checked ~ .nav-btn .nav-icon::before {
+		transform: rotate(135deg) translateY(-2px);
+	}
+
+	&__checkbox:checked ~ .nav-btn .nav-icon::after {
+		transform: rotate(-135deg);
+	}
+
+	&__checkbox:checked ~ .nav-menu {
+		//visibility: visible;
+		opacity: 1;
+		height: calc(100vh - 8rem);
+	}
+}
+
+.nav-btn {
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	margin-top: 2rem;
+	height: 4.5rem;
+
+	&:hover .nav-icon {
+		&::before {
+			transform: translateY(-1.4rem);
+		}
+
+		&::after {
+			transform: translateY(1.2rem);
+		}
+	}
+}
+
+.nav-icon {
+	////////////////
+	/// STYLE ONLY, NO ACTION
+	// border: none;
+	// border-radius: 0;
+	// cursor: pointer;
+	// margin-top: 2rem;
+
+	// background-color: $color-white;
+	// height: 2px;
+	// width: 4.5rem;
+
+	// &::before,
+	// &::after {
+	// 	content: '';
+	// 	height: 2px;
+	// 	width: 4.5rem;
+	// 	display: block;
+	// 	background-color: $color-white;
+	// }
+
+	// &::before {
+	// 	transform: translateY(-1.2rem);
+	// }
+
+	// &::after {
+	// 	transform: translateY(1rem);
+	// }
+
+	///////////////
+	/// STYLE FOR WORKING BTN
+	background-color: $color-white;
+	height: 2px;
+	width: 4.5rem;
+	margin-top: 2rem;
+	display: block;
+
+	&::before,
+	&::after {
+		content: '';
+		height: 2px;
+		width: 4.5rem;
+		display: block;
+		background-color: $color-white;
+		transition: all 0.2s;
+	}
+
+	&::before {
+		transform: translateY(-1.2rem);
+	}
+
+	&::after {
+		transform: translateY(1rem);
+	}
+}
+
+.nav-menu {
+	//visibility: hidden;
+	//opacity: 0;
+	height: 0;
+	transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+	overflow: hidden;
+
+	ul {
+		list-style: none;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		li {
+			width: 100%;
+			a {
+				display: flex;
+				justify-content: center;
+				transition: all 0.2s;
+				padding: 1rem 0;
+				&:hover {
+					transform: translateY(-3px);
+					background-color: rgba($color-white, 0.1);
+				}
+			}
+		}
+	}
+
+	&__icon {
+		height: 3rem;
+		width: 3rem;
+		fill: transparent;
+		stroke: $color-white;
+	}
+
+	&__logo {
+		width: 3rem;
+		filter: brightness(300%);
+	}
 }

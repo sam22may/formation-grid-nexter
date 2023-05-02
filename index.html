@@ -12,13 +12,101 @@
 		<title>Nexter &mdash; your home, your freedom</title>
 	</head>
 	<body class="container">
-		<div class="sidebar">side bar</div>
+		<div class="sidebar">
+			<!-- <div class="sidebar__nav">
+				<button class="nav-btn"></button>
+			</div> -->
+			<div class="sidebar__content">
+				<input type="checkbox" name="menu" id="menu" class="sidebar__checkbox" />
+				<label for="menu" class="nav-btn">
+					<span class="nav-icon"></span>
+				</label>
+				<nav class="nav-menu">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="img/favicon.png" alt="logo" class="nav-menu__logo" />
+							</a>
+						</li>
+						<li>
+							<a href="#realtors">
+								<svg class="nav-menu__icon">
+									<use xlink:href="img/sprite.svg#icon-profile-male"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#features">
+								<svg class="nav-menu__icon">
+									<use xlink:href="img/sprite2.svg#icon-star"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#story">
+								<svg class="nav-menu__icon">
+									<use xlink:href="img/sprite.svg#icon-heart"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#homes">
+								<svg class="nav-menu__icon">
+									<use xlink:href="img/sprite2.svg#icon-home"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#gallery">
+								<svg class="nav-menu__icon">
+									<use xlink:href="img/sprite.svg#icon-trophy"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 
-		<header class="header">header</header>
+		<header id="header" class="header">
+			<img src="img/logo.png" alt="Nexter Logo" class="header__logo" />
+			<h3 class="heading-3">Your own home</h3>
+			<h1 class="heading-1 mb-sm">The ultimate personal freedom</h1>
+			<button class="btn header__btn">View our properties</button>
+			<div class="header__seenon-text">As seen on</div>
+			<div class="header__seenon-logos">
+				<img src="img/logo-bbc.png" alt="BBC" />
+				<img src="img/logo-forbes.png" alt="Forbes" />
+				<img src="img/logo-techcrunch.png" alt="TechCrunch" />
+				<img src="img/logo-bi.png" alt="Business Insider" />
+			</div>
+		</header>
 
-		<div class="realtors">realtors</div>
+		<div id="realtors" class="realtors">
+			<h3 class="heading-3">Top 3 Realtors</h3>
 
-		<section class="features">
+			<div class="realtors__list">
+				<img src="img/realtor-1.jpeg" alt="Realtor 1" class="realtors__img" />
+				<div class="realtors__details">
+					<h4 class="heading-4 heading-4--light">Tom Clark</h4>
+					<p class="realtors__sold">236 houses sold</p>
+				</div>
+
+				<img src="img/realtor-2.jpeg" alt="Realtor 2" class="realtors__img" />
+				<div class="realtors__details">
+					<h4 class="heading-4 heading-4--light">Cathy Bistrol</h4>
+					<p class="realtors__sold">204 houses sold</p>
+				</div>
+
+				<img src="img/realtor-3.jpeg" alt="Realtor 3" class="realtors__img" />
+				<div class="realtors__details">
+					<h4 class="heading-4 heading-4--light">Sam Goodman</h4>
+					<p class="realtors__sold">187 houses sold</p>
+				</div>
+			</div>
+		</div>
+
+		<section id="features" class="features">
 			<div class="feature">
 				<svg class="feature__icon">
 					<use xlink:href="img/sprite.svg#icon-global"></use>
@@ -72,7 +160,7 @@
 			</div>
 		</section>
 
-		<div class="story__pictures">
+		<div id="story" class="story__pictures">
 			<img src="img/story-1.jpeg" alt="Couple with new house" class="story__img--1" />
 			<img src="img/story-2.jpeg" alt="New house" class="story__img--2" />
 		</div>
@@ -87,7 +175,7 @@
 			<button class="btn">Find your own home</button>
 		</div>
 
-		<section class="homes">
+		<section id="homes" class="homes">
 			<div class="home">
 				<img src="img/house-1.jpeg" alt="House 1" class="home__img" />
 				<svg class="home__like">
@@ -287,7 +375,7 @@
 			</div>
 		</section>
 
-		<section class="gallery">
+		<section id="gallery" class="gallery">
 			<figure class="gallery__item gallery__item--1">
 				<img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img" />
 			</figure>
@@ -332,7 +420,7 @@
 			</figure>
 		</section>
 
-		<footer class="footer">
+		<footer id="footer" class="footer">
 			<ul class="nav">
 				<li class="nav__item"><a href="#" class="nav__link">Find your dream home</a></li>
 				<li class="nav__item"><a href="#" class="nav__link">Request proposal</a></li>
