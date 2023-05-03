@@ -3,6 +3,10 @@
 	grid-column: full-start / full-end;
 
 	padding: 8rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 4rem;
+	}
 }
 
 .nav {
@@ -39,4 +43,8 @@
 	margin: 6rem auto 0 auto;
 	text-align: center;
 	width: 70%;
+
+	@media only screen and (max-width: $bp-medium) {
+		width: 100%;
+	}
 }

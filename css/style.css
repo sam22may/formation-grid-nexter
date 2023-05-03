@@ -22,6 +22,10 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-rows: 80vh repeat(7, min-content); } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -93,6 +97,9 @@ body {
     top: 0;
     left: 0;
     width: 8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .sidebar__content {
+        width: 6rem; } }
   .sidebar__checkbox {
     display: none; }
   .sidebar__checkbox:checked ~ .nav-btn .nav-icon {
@@ -319,6 +326,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   margin: 15rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .homes {
+      grid-template-columns: 1fr;
+      grid-column: full-start / full-end;
+      margin: 10rem 0; } }
 
 .home {
   background-color: #f9f7f6;
@@ -430,6 +442,9 @@ body {
   background-color: #101d2c;
   grid-column: full-start / full-end;
   padding: 8rem; }
+  @media only screen and (max-width: 50em) {
+    .footer {
+      padding: 4rem; } }
 
 .nav {
   list-style: none;
@@ -457,3 +472,6 @@ body {
   margin: 6rem auto 0 auto;
   text-align: center;
   width: 70%; }
+  @media only screen and (max-width: 50em) {
+    .copyright {
+      width: 100%; } }
